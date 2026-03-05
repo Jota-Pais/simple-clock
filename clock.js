@@ -6,14 +6,23 @@ function updateClock() {
     const seconds = String(now.getSeconds()).padStart(2, '0');
     clockElement.textContent = `${hours}:${minutes}:${seconds}`;
 }
+<<<<<<< HEAD
 function changeBackgroundColor() {
     const colors = ["#ff0000ff", "#ffbb00ff", "#00ff00ff", "#0000feff", "#ff00ccff"];
+=======
+setInterval(updateClock, 1000);
+
+
+document.getElementById("colorButton").onclick = function() {
+    const colors = ["#f0f0f0", "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"];
+>>>>>>> refs/remotes/origin/main
     let currentColor = document.body.style.backgroundColor;
     let newColor = colors[Math.floor(Math.random() * colors.length)];
     while (newColor === currentColor) {
         newColor = colors[Math.floor(Math.random() * colors.length)];
     }
     document.body.style.backgroundColor = newColor;
+<<<<<<< HEAD
 };
 
 let changeColor = false;
@@ -26,4 +35,8 @@ setInterval(() => {
 }, 1 );
 document.getElementById("colorButton").onclick = function() {
     changeColor = !changeColor;
+=======
+
+    alert('trocou de cor');
+>>>>>>> refs/remotes/origin/main
 };
