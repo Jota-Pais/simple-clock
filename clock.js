@@ -7,6 +7,8 @@ function updateClock() {
     clockElement.textContent = `${hours}:${minutes}:${seconds}`;
 }
 setInterval(updateClock, 1000);
+
+
 document.getElementById("colorButton").onclick = function() {
     const colors = ["#f0f0f0", "#ffcccc", "#ccffcc", "#ccccff", "#ffffcc"];
     let currentColor = document.body.style.backgroundColor;
@@ -15,4 +17,6 @@ document.getElementById("colorButton").onclick = function() {
         newColor = colors[Math.floor(Math.random() * colors.length)];
     }
     document.body.style.backgroundColor = newColor;
+
+    alert('trocou de cor');
 };
